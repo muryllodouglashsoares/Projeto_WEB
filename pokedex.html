@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pokédex | PokéExplorer</title>
+  <meta name="description" content="Os 30 primeiros Pokémon da PokéAPI com busca, filtro por tipo e favoritos.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito+Sans:wght@400;600;700;800&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <a class="pular-link" href="#conteudo">Ir para o conteúdo</a>
+
+  <header class="topo">
+    <div class="topo__interno container">
+      <a class="logo" href="index.html">
+        <span class="pokebola pokebola--mini" aria-hidden="true"></span>
+        PokéExplorer
+      </a>
+      <button class="menu-botao" id="menu-botao" type="button" aria-expanded="false" aria-controls="menu">
+        <span class="menu-botao__icone" aria-hidden="true"></span>
+        <span>Menu</span>
+      </button>
+      <nav class="menu" id="menu" aria-label="Principal">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="pokedex.html" aria-current="page">Pokédex</a></li>
+          <li><a href="favoritos.html">Favoritos</a></li>
+          <li><a href="equipe.html">Equipe</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo" tabindex="-1">
+    <section class="pagina-topo container" aria-labelledby="titulo">
+      <h1 id="titulo">Pokédex</h1>
+      <p>Os 30 primeiros Pokémon, em ordem de número. Busque pelo nome ou número, filtre por tipo e salve os seus favoritos.</p>
+    </section>
+
+    <div class="container">
+      <form class="filtros" id="filtros" role="search" aria-label="Buscar e filtrar Pokémon" hidden>
+        <div class="campo">
+          <label for="busca">Buscar por nome ou número</label>
+          <input type="search" id="busca" name="busca" placeholder="Ex.: pikachu ou 25" autocomplete="off">
+        </div>
+        <div class="campo">
+          <label for="tipo">Filtrar por tipo</label>
+          <select id="tipo" name="tipo">
+            <option value="">Todos os tipos</option>
+          </select>
+        </div>
+      </form>
+
+      <p class="resumo" id="resumo" aria-live="polite"></p>
+
+      <div class="estado" id="carregando" role="status">
+        <span class="pokebola pokebola--spinner" aria-hidden="true"></span>
+        <p>Carregando Pokémon…</p>
+      </div>
+
+      <div class="estado estado--erro" id="erro" role="alert" hidden>
+        <h2>Não foi possível carregar os Pokémon</h2>
+        <p>Parece que houve um problema com a conexão ou com a PokéAPI. Verifique sua internet e tente novamente.</p>
+        <button class="btn" id="tentar-novamente" type="button">Tentar novamente</button>
+      </div>
+
+      <div class="estado" id="sem-resultados" hidden>
+        <h2>Nenhum Pokémon encontrado</h2>
+        <p>Nenhum Pokémon combina com a busca e o tipo escolhidos. Tente outro nome, número ou tipo.</p>
+        <button class="btn" id="limpar-filtros" type="button">Limpar filtros</button>
+      </div>
+
+      <ul class="grade" id="grade" aria-label="Lista de Pokémon"></ul>
+    </div>
+  </main>
+
+  <footer class="rodape">
+    <div class="rodape__interno container">
+      <p><strong>PokéExplorer</strong> — projeto escolar de WEB 1</p>
+      <p>Dados fornecidos pela <a href="https://pokeapi.co/" target="_blank" rel="noopener noreferrer">PokéAPI</a>. Pokémon é marca de seus respectivos proprietários.</p>
+    </div>
+  </footer>
+
+  <script src="js/comum.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/favoritos.js"></script>
+  <script src="js/componentes.js"></script>
+  <script src="js/modal.js"></script>
+  <script src="js/pokedex.js"></script>
+</body>
+</html>

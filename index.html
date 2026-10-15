@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Início | PokéExplorer</title>
+  <meta name="description" content="Explore o universo Pokémon: conheça Pokémon, veja detalhes e salve seus favoritos.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito+Sans:wght@400;600;700;800&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <a class="pular-link" href="#conteudo">Ir para o conteúdo</a>
+
+  <header class="topo">
+    <div class="topo__interno container">
+      <a class="logo" href="index.html">
+        <span class="pokebola pokebola--mini" aria-hidden="true"></span>
+        PokéExplorer
+      </a>
+      <button class="menu-botao" id="menu-botao" type="button" aria-expanded="false" aria-controls="menu">
+        <span class="menu-botao__icone" aria-hidden="true"></span>
+        <span>Menu</span>
+      </button>
+      <nav class="menu" id="menu" aria-label="Principal">
+        <ul>
+          <li><a href="index.html" aria-current="page">Início</a></li>
+          <li><a href="pokedex.html">Pokédex</a></li>
+          <li><a href="favoritos.html">Favoritos</a></li>
+          <li><a href="equipe.html">Equipe</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo" tabindex="-1">
+    <section class="hero container" aria-labelledby="titulo">
+      <div class="hero__texto">
+        <h1 id="titulo">Explore o universo Pokémon</h1>
+        <p>Conheça Pokémon, descubra suas características e salve seus favoritos em uma Pokédex feita para explorar.</p>
+        <div class="hero__botoes">
+          <a class="btn" href="pokedex.html">Explorar Pokédex</a>
+          <a class="btn btn--secundario" href="favoritos.html">Meus favoritos</a>
+        </div>
+      </div>
+      <div class="hero__arte">
+        <span class="pokebola" aria-hidden="true"></span>
+        <span class="hero__ponto hero__ponto--amarelo" aria-hidden="true"></span>
+        <span class="hero__ponto hero__ponto--azul" aria-hidden="true"></span>
+        <img class="hero__imagem" data-nome="Pikachu" alt="Ilustração do Pikachu" width="475" height="475"
+             src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png">
+      </div>
+    </section>
+
+    <section class="secao container" aria-labelledby="funcoes-titulo">
+      <h2 id="funcoes-titulo">O que você pode fazer</h2>
+      <ul class="funcoes">
+        <li class="funcao">
+          <span class="funcao__icone funcao__icone--vermelho" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></span>
+          <h3>Explorar</h3>
+          <p>Navegue pelos 30 primeiros Pokémon e use a busca e o filtro de tipo para encontrar o seu.</p>
+        </li>
+        <li class="funcao">
+          <span class="funcao__icone funcao__icone--azul" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg></span>
+          <h3>Consultar detalhes</h3>
+          <p>Abra uma janela com altura, peso, habilidades e estatísticas de cada Pokémon.</p>
+        </li>
+        <li class="funcao">
+          <span class="funcao__icone funcao__icone--amarelo" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></span>
+          <h3>Favoritar</h3>
+          <p>Toque no coração para guardar seus Pokémon preferidos e vê-los na página Favoritos.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="secao container" aria-labelledby="dados-titulo">
+      <div class="dados">
+        <h2 id="dados-titulo">De onde vêm os dados</h2>
+        <p>Todas as informações dos Pokémon são buscadas na <a href="https://pokeapi.co/" target="_blank" rel="noopener noreferrer">PokéAPI</a>, uma API pública e gratuita sobre o universo Pokémon.</p>
+        <p>Seus favoritos ficam salvos no próprio navegador (localStorage). Eles não são enviados a nenhum servidor e só aparecem neste navegador, neste aparelho.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="rodape__interno container">
+      <p><strong>PokéExplorer</strong> — projeto escolar de WEB 1</p>
+      <p>Dados fornecidos pela <a href="https://pokeapi.co/" target="_blank" rel="noopener noreferrer">PokéAPI</a>. Pokémon é marca de seus respectivos proprietários.</p>
+    </div>
+  </footer>
+
+  <script src="js/comum.js"></script>
+</body>
+</html>

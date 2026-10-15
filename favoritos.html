@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Favoritos | PokéExplorer</title>
+  <meta name="description" content="Seus Pokémon favoritos, salvos no navegador.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito+Sans:wght@400;600;700;800&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <a class="pular-link" href="#conteudo">Ir para o conteúdo</a>
+
+  <header class="topo">
+    <div class="topo__interno container">
+      <a class="logo" href="index.html">
+        <span class="pokebola pokebola--mini" aria-hidden="true"></span>
+        PokéExplorer
+      </a>
+      <button class="menu-botao" id="menu-botao" type="button" aria-expanded="false" aria-controls="menu">
+        <span class="menu-botao__icone" aria-hidden="true"></span>
+        <span>Menu</span>
+      </button>
+      <nav class="menu" id="menu" aria-label="Principal">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="pokedex.html">Pokédex</a></li>
+          <li><a href="favoritos.html" aria-current="page">Favoritos</a></li>
+          <li><a href="equipe.html">Equipe</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo" tabindex="-1">
+    <section class="pagina-topo container" aria-labelledby="titulo">
+      <h1 id="titulo" tabindex="-1">Meus favoritos</h1>
+      <p id="contador" aria-live="polite"></p>
+    </section>
+
+    <div class="container">
+      <div class="estado vazio" id="vazio" hidden>
+        <span class="pokebola" aria-hidden="true"></span>
+        <p>Você ainda não tem Pokémon favoritos. Explore a Pokédex e toque no coração para salvar os seus!</p>
+        <a class="btn" href="pokedex.html">Explorar Pokédex</a>
+      </div>
+
+      <ul class="grade" id="grade" aria-label="Pokémon favoritos"></ul>
+    </div>
+  </main>
+
+  <footer class="rodape">
+    <div class="rodape__interno container">
+      <p><strong>PokéExplorer</strong> — projeto escolar de WEB 1</p>
+      <p>Dados fornecidos pela <a href="https://pokeapi.co/" target="_blank" rel="noopener noreferrer">PokéAPI</a>. Pokémon é marca de seus respectivos proprietários.</p>
+    </div>
+  </footer>
+
+  <script src="js/comum.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/favoritos.js"></script>
+  <script src="js/componentes.js"></script>
+  <script src="js/modal.js"></script>
+  <script src="js/favoritos-pagina.js"></script>
+</body>
+</html>
