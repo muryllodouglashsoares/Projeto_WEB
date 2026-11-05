@@ -1,5 +1,11 @@
 # PokéExplorer
 
+INTEGRANTES: 
+  - Muryllo Douglas Henrique Soares
+  - Gerfersom Belarmino da Silva
+  - Thayná Vieira dos Santos
+  - Thaynara Vieira dos Santos
+
 Projeto escolar de WEB 1. Explora os 30 primeiros Pokémon da [PokéAPI](https://pokeapi.co/) e salva favoritos no navegador (localStorage).
 Feito com HTML5, CSS3 e JavaScript puro (fetch + async/await). Sem backend, banco de dados, login ou frameworks.
 
